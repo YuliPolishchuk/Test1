@@ -10,25 +10,26 @@ Login to Expo
 expo login
 ```
 
-Create a Production Build
+**Create a Production Build**
 
-**For iOS:**
+For iOS:
 
 ```bash
 eas build -p ios --profile production
 ```
 
-**For Android:**
+For Android:
 
 ```bash
 eas build -p android --profile productions
 ```
 
-Using the --local Flag
+### Using the `--local` Flag
 
-For local builds that do not require remote Expo servers, you can use the --local flag:
+For local builds that do not require remote Expo servers, you can use the `--local` flag:
 
 Android:
+
 ```bash
 eas build -p android --profile development --local
 ```
@@ -38,6 +39,7 @@ iOS:
 ```bash
 eas build -p ios --profile development --local
 ```
+
 This will build the app locally on your machine instead of using Expo's cloud services.
 
 #  Deployment & Distribution
