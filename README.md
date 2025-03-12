@@ -12,13 +12,13 @@ expo login
 
 Create a Production Build
 
-For iOS:
+**For iOS:**
 
 ```bash
 eas build -p ios --profile production
 ```
 
-For Android:
+**For Android:**
 
 ```bash
 eas build -p android --profile productions
