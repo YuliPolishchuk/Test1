@@ -4,11 +4,19 @@ Female Invest uses [Expo Application Services](https://expo.dev) to automate the
 
 ### Build Process
 
-Login to Expo
+**Install the latest EAS CLI**
 
 ```bash
-expo login
+npm install -g eas-cli
 ```
+
+**Log in to your Expo account**
+
+```bash
+eas login
+```
+
+You can check whether you are logged in by running `eas whoami`.
 
 **Create a Production Build**
 
@@ -21,20 +29,27 @@ eas build -p ios --profile production
 For Android:
 
 ```bash
-eas build -p android --profile productions
+eas build -p android --profile production
 ```
+
+Alternatively, you can use `--platform` all option to build for Android and iOS at the same time:
+
+```bash
+eas build --platform all --profile production
+```
+
 
 ### Using the `--local` Flag
 
 For local builds that do not require remote Expo servers, you can use the `--local` flag:
 
-Android:
+**Android:**
 
 ```bash
 eas build -p android --profile development --local
 ```
 
-iOS:
+**iOS:**
 
 ```bash
 eas build -p ios --profile development --local
@@ -43,6 +58,8 @@ eas build -p ios --profile development --local
 This will build the app locally on your machine instead of using Expo's cloud services.
 
 #  Deployment & Distribution
+
+If you have made it to this step, congratulations! Depending on which path you chose, you now either have a build that is ready to upload to an app store, or you have a build that you can install directly on an Android device/iOS Simulator.
 
 Android Release
 
