@@ -18,7 +18,7 @@ eas login
 
 You can check whether you are logged in by running `eas whoami`.
 
-**Create a Production Build**
+### Create a Production Build
 
 For iOS:
 
@@ -46,13 +46,13 @@ For local builds that do not require remote Expo servers, you can use the `--loc
 **Android:**
 
 ```bash
-eas build -p android --profile development --local
+eas build -p android --profile production --local
 ```
 
 **iOS:**
 
 ```bash
-eas build -p ios --profile development --local
+eas build -p ios --profile production --local
 ```
 
 This will build the app locally on your machine instead of using Expo's cloud services.
@@ -61,20 +61,20 @@ This will build the app locally on your machine instead of using Expo's cloud se
 
 If you have made it to this step, congratulations! Depending on which path you chose, you now either have a build that is ready to upload to an app store, or you have a build that you can install directly on an Android device/iOS Simulator.
 
-Android Release
+**Android Release**
 
 Submit the app to Google Play using:
 
 ```bash
-eas submit -p android --track production
+eas submit -p android --profile production
 ```
 
-iOS Release
+**iOS Release**
 
 Submit the app to the App Store using:
 
 ```bash
-eas submit -p ios
+eas submit -p ios --profile production
 ```
 
 # Testing & QA
